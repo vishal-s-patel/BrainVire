@@ -1,0 +1,77 @@
+Question 1:
+
+Assume there are three array with N numbers of length,
+Now we like to get all possible pairs of these three arrays.
+
+Make sure about all Permutation and Combination without duplicating pairs.
+
+All three array data can be added via user with comma seperator. 
+Create form for this with submit button.
+
+clicking on submit should print result below form.
+
+e.g.
+
+
+Array One = {A,B,C}
+
+Array Two = {a,b,c}
+
+Array Three = {1,2,3}
+
+
+
+
+Expected OUTPUT:
+
+
+Possible pairs can be,
+
+A,a,1
+
+B,b,2
+
+C,c,3
+
+
+A,a,1
+
+A,a,2
+
+A,a,3
+
+
+A,b,1
+
+A,b,2
+
+A,b,3
+
+
+A,c,1
+
+A,c,2
+
+A,c,3
+
+--------------------------------------------------------------------------------------------------------------------
+
+Question 2:
+
+Write program to print Fibonacci series, Limit of series should user input in form with submit button.
+clicking on submit should print result below form.
+
+
+e.g
+
+User input : 30
+
+0, 1, 1, 2, 3, 5, 8, 13, 21
+
+
+User input : 40
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+
+
+

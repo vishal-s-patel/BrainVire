@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function printOutput() {
+            let arr1 = document.getElementById('arr1').value ? document.getElementById('arr1').value.split(',') : [];
+            let arr2 = document.getElementById('arr2').value ? document.getElementById('arr2').value.split(',') : [];
+            let arr3 = document.getElementById('arr3').value ? document.getElementById('arr3').value.split(',') : [];
+            const outputDiv = document.getElementById("output");
+            if (arr1.length === 0 || arr2.length === 0 || arr3.length === 0) {
+                outputDiv.innerHTML = 'Input cannot be empty';
+                return
+            }
+            let result = [];
+
+            for (let i = 0; i < arr1.length; i++) {
+                for (let j = 0; j < arr2.length; j++) {
+                    for (let k = 0; k < arr3.length; k++) {
+                        result.push(`${arr1[i]},${arr2[j]},${arr3[k]}`);
+                    }
+                }
+            }
+
+            let arr = [...new Set(result)];
+            outputDiv.innerHTML = 'Output';
+            for (let i = 0; i < arr.length; i++) {
+                const para = document.createElement("p");
+                para.innerHTML = arr[i];
+                outputDiv.appendChild(para);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div style="margin-bottom: 10px;">
+        <label>Array 1</label>
+        <input type="text" id="arr1">
+    </div>
+    <div style="margin-bottom: 10px;">
+        <label>Array 2</label>
+        <input type="text" id="arr2">
+    </div>
+    <div style="margin-bottom: 10px;">
+        <label>Array 3</label>
+        <input type="text" id="arr3">
+    </div>
+    <div style="margin-bottom: 10px;">
+        <button type="submit" onclick="printOutput()">Submit</button>
+    </div>
+    <div id="output">
+    </div>
+</body>
+
+</html>
